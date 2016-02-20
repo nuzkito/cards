@@ -5,7 +5,7 @@ import merge from 'webpack-merge';
 const env = process.env.npm_lifecycle_event;
 const paths = {
     src: path.join(__dirname, 'src'),
-    dist: path.join(__dirname, 'public'),
+    dist: path.join(__dirname, '.'),
 };
 
 let config = {
