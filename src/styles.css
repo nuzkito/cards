@@ -1,0 +1,162 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1em;
+    font-family: 'DejaVu Sans', sans-serif;
+}
+
+button {
+    font-family: 'DejaVu Sans', sans-serif;
+}
+
+.Cards {
+    background: #0074D9;
+    padding: 1em;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+}
+
+.Cards-columns {
+    flex-shrink: 0;
+    display: flex;
+}
+
+.Cards-column {
+    flex-shrink: 0;
+    width: 18em;
+    margin-right: 1em;
+}
+
+.Cards-group {
+    background: #DDDDDD;
+    padding: 1em;
+    border-radius: 0.15em;
+    box-shadow: 0 .1em #666;
+    margin-bottom: 1em;
+}
+
+.Cards-header {
+    margin-bottom: 1em;
+}
+
+.Cards-title {
+    margin: 0;
+}
+
+.Cards-titleInput {
+    width: 100%;
+}
+
+.Cards-card {
+    border-radius: 0.15em;
+    padding: 1em;
+    background: white;
+    box-shadow: 0 .1em .1em #aaa;
+    position: relative;
+}
+
+.Cards-card:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.Cards-cardText {
+    margin: 0;
+}
+
+.Cards-cardTextInput {
+    width: 100%;
+}
+
+.Cards-deleteCardButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+    padding: 0;
+    color: red;
+    font-size: 1em;
+    cursor: pointer;
+    padding: .1em;
+    display: none;
+}
+
+.Cards-deleteCardButton::before {
+    content: '×';
+    font-weight: bold;
+}
+
+.Cards-card:hover .Cards-deleteCardButton {
+    display: block;
+}
+
+.Cards-addCardButton {
+    margin-top: 1em;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-size: 1em;
+}
+
+.Cards-addCardButton::before {
+    color: #aaa;
+    font-weight: bold;
+    font-size: 1.5em;
+    content: '+';
+}
+
+.Cards-addGroupButton {
+    background: #DDDDDD;
+    padding: .5em;
+    border-radius: 0.15em;
+    box-shadow: 0 .1em #666;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    width: 100%;
+    font-size: 1em;
+}
+
+.Cards-addGroupButton::before {
+    color: #aaa;
+    font-weight: bold;
+    font-size: 1.5em;
+    content: '+';
+}
+
+.Cards-addColumnButton {
+    flex-shrink: 0;
+    background: #DDDDDD;
+    padding: .5em;
+    border-radius: 0.15em;
+    box-shadow: 0 .1em #666;
+    cursor: pointer;
+    text-align: center;
+    align-self: flex-start;
+    width: 18em;
+    border: none;
+    font-size: 1em;
+}
+
+.Cards-addColumnButton::before {
+    color: #aaa;
+    font-weight: bold;
+    font-size: 1.5em;
+    content: '+';
+}
+
+.Cards-help {
+    color: white;
+    text-shadow: 0 0 .2em black;
+    margin: 1em;
+}
+
+.is-hidden {
+    display: none;
+}
