@@ -17,7 +17,6 @@ let config = {
     resolve: {
         extensions: ['', '.js', '.jsx']
     },
-    devtool: 'inline-source-map',
     module: {
         loaders: [
             {
@@ -36,6 +35,7 @@ let config = {
 
 if (env === 'serve' || !env) {
     config = merge(config, {
+        devtool: 'inline-source-map',
         devServer: {
             contentBase: paths.dist,
             historyApiFallback: true,
